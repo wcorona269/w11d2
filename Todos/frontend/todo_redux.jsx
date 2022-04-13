@@ -1,8 +1,11 @@
 import configureStore from './store/store';
 import { receiveTodo, receiveTodos, removeTodo } from './actions/todo_actions';
 import { receiveStep, receiveSteps, removeStep } from './actions/step_actions';
+import allTodos from './reducers/selectors';
 import React from "react";
 import ReactDOM from "react-dom";
+import App from './components/app';
+import Root from './components/root';
 
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,10 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
   window.receiveSteps = receiveSteps;
   window.removeStep = removeStep;
 
+  window.allTodos = allTodos;
+
   const Variable = () =>{
     return (
-      <h1>Todos App</h1>
+      <h1>It's not working</h1>
     )
   }
-  ReactDOM.render(<Variable />, content);
+  ReactDOM.render(<Root store={store}/>, content);
 });
