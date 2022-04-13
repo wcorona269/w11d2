@@ -7,7 +7,7 @@ class TodoForm extends React.Component{
       id: this.uniqueId(),
       title: '',
       body: '',
-      done: false
+      done: ''
     }
 
     this.updateTitle = this.updateTitle.bind(this);
@@ -30,10 +30,9 @@ class TodoForm extends React.Component{
   }
 
   handleSubmit(e){
-    // debugger
     e.preventDefault();   
     this.props.receiveTodo(this.state);
-    this.setState = ({
+    this.setState({
       id: this.uniqueId(),
       title: '',
       body: '',
