@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 import allTodos from '../../reducers/selectors';
 import TodoList from './todo_list';
-import { receiveTodo, removeTodo } from '../../actions/todo_actions';
+import { receiveTodo, removeTodo, fetchAllTodos } from '../../actions/todo_actions';
 
 const MSTP = (state) => ({
   // todos: allTodos(state)
@@ -10,6 +10,7 @@ const MSTP = (state) => ({
 
 const MDTP = (dispatch) => ({
   receiveTodo: (todo) => dispatch(receiveTodo(todo)),
+  fetchAllTodos: () => dispatch(fetchAllTodos()),
   removeTodo: (todo) => dispatch(removeTodo(todo))
 });
 

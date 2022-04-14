@@ -1,5 +1,5 @@
 import configureStore from './store/store';
-import { receiveTodo, receiveTodos, removeTodo } from './actions/todo_actions';
+import { receiveTodo, receiveTodos, removeTodo, fetchAllTodos } from './actions/todo_actions';
 import { receiveStep, receiveSteps, removeStep } from './actions/step_actions';
 import allTodos from './reducers/selectors';
 import React from "react";
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.removeStep = removeStep;
 
   window.allTodos = allTodos;
-
+  window.fetchAllTodos = fetchAllTodos;
   window.fetchTodos = fetchTodos;
 
   const Variable = () =>{
